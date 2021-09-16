@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Js | Typescript | Firebase
 
 ## Available Scripts
 
@@ -22,11 +20,23 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+### `Authentication`
+
+Firebase Authentication Module is used to login and register
+
 ### `Log in`
 
-To login the credentials are next
-*Email: prueba@prueba.com
-*Password: qwerty
+To login the credentials are next:
+
+- email: prueba@prueba.com
+- password: qwerty
+
+### `Register`
+
+You can register to start session, the parameters are:
+
+- Email
+- Password
 
 ### `npm run build`
 
