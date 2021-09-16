@@ -38,12 +38,12 @@ You can register to start session, the parameters are:
 - Email
 - Password
 
-### `npm run build`
+### `Routes`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The private route is protected, to access this section you need to log in
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- / => Public
+- /registro => Public
+- /tareas => Private
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
