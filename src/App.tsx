@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable import/first */
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { AuthContextProvider } from "./Firebase/context";
+import Root from "./components/Root/Root";
+import ProtectRoute from "./components/ProtectRoute/ProtectRoute";
+import Tareas from "./Tareas/Tareas";
+import Login from "./Login/Login";
+import Registro from "./Login/registro";
 
-function App() {
+const App = (): JSX.Element => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <AuthContextProvider>
+        <Root>
+          <Switch>
+            <ProtectRoute type="public" exact path="/" component={Login} />
+            <ProtectRoute type="public" exact path="/registro" component={Registro} />
+            <ProtectRoute type="private" exact path="/tareas" component={Tareas} />
+          </Switch>
+        </Root>
+      </AuthContextProvider>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
